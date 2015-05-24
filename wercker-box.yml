@@ -1,5 +1,5 @@
 name: ubuntu-15.04
-version: 0.0.6
+version: 0.0.7
 inherits: ruudk/ubuntu14.04@1.0.0
 description: Ubuntu 12.04 upgraded to 15.04
 type: main
@@ -13,13 +13,12 @@ script: |
   sudo sed -i 's/Prompt=.*/Prompt=normal/' /etc/update-manager/release-upgrades
   cat /etc/update-manager/release-upgrades
   lsb_release -a
-  
   sudo do-release-upgrade -f DistUpgradeViewNonInteractive -m server
+  
   sudo aptitude update
-  sudo aptitude safe-upgrade
   lsb_release -a
-  
   sudo do-release-upgrade -f DistUpgradeViewNonInteractive -m server
+  
   sudo aptitude update
   sudo aptitude safe-upgrade
   lsb_release -a
