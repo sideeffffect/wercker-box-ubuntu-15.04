@@ -1,5 +1,5 @@
 name: ubuntu-15.04
-version: 0.0.2
+version: 0.0.3
 description: Ubuntu 12.04 upgraded to 15.04
 type: main
 platform: ubuntu@12.04
